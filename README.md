@@ -8,26 +8,28 @@ Append the target URL to be shortened to the `shorten` parameter
 
 ```https://sean.red/?shorten=https://www.youtube.com/watch?v=Xw5l-hCpVdw```
 
-The response will return the shortened URL as plain text
+The returned response will contain the shortened URL as plain text
 
 ```https://sean.red/buoa1l```
 
+Note that this method is only limited to shortening a single URL. The next method will allow for multiple URLs to be shortened at once
+
 ### Using POST or PUT request
 
-The following JSON bodies can be used to shorten URLs:
+The following JSON bodies can be used in the request to shorten URLs:
 
-To shorten a single URL:
+To shorten a single URL
 
 ```json
 {
   "url": "https://www.youtube.com/watch?v=X-XZziAc4Qc"
 }
 ```
-To shorted multiple URLs:
+To shorten multiple URLs
 
 ```json
 {
-  "urls": [
+  "url": [
     "https://www.youtube.com/watch?v=X-XZziAc4Qc",
     "https://www.youtube.com/watch?v=hl9sSQhlqCU"
   ]
@@ -40,7 +42,7 @@ or simply as an array
     "https://www.youtube.com/watch?v=hl9sSQhlqCU"
 ]
 ```
-The response will a JSON array of objects containing the origin URL and the shortened URL
+The response will be a JSON array of objects containing the origin URL and the shortened URL
 
  ```json
 [
@@ -58,6 +60,8 @@ The response will a JSON array of objects containing the origin URL and the shor
 ## Notes
 
 Feel free to copy and make it your own!
+
+Random slug generator can be improved, feel free to send a pull request.
 
 ## Author
 
