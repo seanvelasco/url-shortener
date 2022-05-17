@@ -1,0 +1,7 @@
+name = "url-shortener"
+main = "src/index.ts"
+compatibility_date = "2022-05-17"
+
+kv_namespaces = [
+    { binding = "shortener", id = "7de270c960884a1ea4f1dc5b82940bb7", preview_id = "7e3f3473c78d4fa4ab5cff4c15a98578" }
+]
